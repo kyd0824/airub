@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation Sheet - Revolutionize Every Moment of Assessment</title>
+    <meta name="description" content="Build quantitative & qualitative evaluations in minutes with Evaluation Sheet. A Google-Sheets-powered toolkit for every kind of assessment.">
+    <meta property="og:title" content="Evaluation Sheet - Assessment Toolkit">
+    <meta property="og:description" content="Build quantitative & qualitative evaluations in minutes with Evaluation Sheet. A Google-Sheets-powered toolkit for every kind of assessment.">
+    <meta property="og:image" content="https://readdy.ai/api/search-image?query=professional%2520spreadsheet%2520dashboard%2520with%2520assessment%2520data%2520charts%2520and%2520graphs%2520on%2520clean%2520white%2520background%2520modern%2520minimal%2520design%2520high%2520quality&width=1200&height=630&seq=og-image&orientation=landscape">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#111827'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #111827;
+        }
+        
+        .hero-section {
+            background-image: url('https://readdy.ai/api/search-image?query=professional%2520modern%2520workspace%2520with%2520laptop%2520showing%2520spreadsheet%2520data%2520and%2520assessment%2520charts%2520on%2520a%2520clean%2520white%2520desk%2520with%2520minimal%2520accessories%2520soft%2520natural%2520lighting%2520from%2520left%2520side%2520gradient%2520to%2520white%2520on%2520left%2520perfect%2520for%2520text%2520overlay%2520high%2520quality%2520professional&width=1920&height=1080&seq=hero-bg&orientation=landscape');
+            background-size: cover;
+            background-position: center right;
+            position: relative;
+        }
+        
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 600ms, transform 600ms;
+        }
+        
+        .scroll-reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        #zoomShot {
+            transition: transform 700ms cubic-bezier(.25,.8,.25,1);
+            will-change: transform;
+        }
+        
+        #zoomShot.scaleUp {
+            transform: scale(1.08);
+        }
+        
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            transition: transform 200ms ease-out;
+        }
+        
+        .sticky-cta:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .scroll-reveal {
+                transition: none;
+            }
+            
+            #zoomShot {
+                transition: none;
+            }
+            
+            .sticky-cta:hover {
+                transform: none;
+            }
+            
+            .hover-scale:hover {
+                transform: none !important;
+            }
+        }
+        
+        .hover-scale {
+            transition: transform 200ms ease-out;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        input:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">핵심 기능</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    형성 평가 결과를 바탕으로 동작합니다.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 !rounded shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 flex items-center justify-center text-primary bg-blue-50 rounded-full mb-4">
+                        <i class="ri-calculator-line ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">정답률 계산</h3>
+                    <p class="text-gray-600">문항별, 학습목표별, 단원별 정답률 제공</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 !rounded shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 flex items-center justify-center text-primary bg-blue-50 rounded-full mb-4">
+                        <i class="ri-bar-chart-2-line ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">시각화 제공</h3>
+                    <p class="text-gray-600">응답 데이터를 바탕으로 다양한 차트 형태로 제공합니다.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 !rounded shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 flex items-center justify-center text-primary bg-blue-50 rounded-full mb-4">
+                        <i class="ri-feedback-line ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">개별 피드백</h3>
+                    <p class="text-gray-600">학생들이 선택한 응답별로 개별 피드백을 제공합니다.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-white p-6 !rounded shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 flex items-center justify-center text-primary bg-blue-50 rounded-full mb-4">
+                        <i class="ri-robot-line ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">AI</h3>
+                    <p class="text-gray-600">AI를 통해 피드백을 받아보고 서술형을 채점할 수 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">사용 방법</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    평가 결과를 수집하고, 분석해보세요.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 text-primary rounded-full mb-4 text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-semibold mb-2">구글 폼 연결</h3>
+                    <p class="text-gray-600">구글 폼으로 평가 문제를 작성하고 연결하세요. Brisk Teaching과 함께하면 더욱 편리해집니다.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 text-primary rounded-full mb-4 text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-semibold mb-2">응답 수집</h3>
+                    <p class="text-gray-600">학생들의 평가 문제에 대한 응답을 수집합니다.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 text-primary rounded-full mb-4 text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-semibold mb-2">통계 및 분석</h3>
+                    <p class="text-gray-600">학생들의 응답 결과를 바탕으로 다양한 통계와 분석 자료를 제공합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">사용 화면</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">사용 예시 화면입니다.</p>
+            </div>
+            
+            <div class="space-y-24">
+                <!-- Gallery Item 1 -->
+                <figure class="scroll-reveal flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <img 
+                            src="https://lsder147.mycafe24.com/wp-content/uploads/2025/04/123.png"
+                            alt="Assessment dashboard showing rubrics and scoring criteria"
+                            class="w-full !rounded shadow-lg"
+                            loading="lazy"
+                            srcset="https://lsder147.mycafe24.com/wp-content/uploads/2025/04/123.png 400w, https://lsder147.mycafe24.com/wp-content/uploads/2025/04/123.png 800w"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                        >
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-4">AI 피드백 제공</h3>
+                        <p class="text-gray-600 mb-4">
+                            AI가 학생들의 평가 결과를 바탕으로 강점, 약점, 개선사항 등을 분석하여 제공합니다.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-1"><i class="ri-check-line"></i></div>
+                                <span>학생 개인 피드백 제공</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-1"><i class="ri-check-line"></i></div>
+                                <span>반 전체 피드백 제공</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-1"><i class="ri-check-line"></i></div>
+                                <span>GPT 최신 모델 사용</span>
+                            </li>
+                        </ul>
+                    </div>
+                </figure>
+                
+                <!-- Gallery Item 2 -->
+                <figure class="scroll-reveal flex flex-col md:flex-row-reverse items-center gap-8">
+                    <div class="md:w-1/2">
+                        <img 
+                            src="https://lsder147.mycafe24.com/wp-content/uploads/2025/04/1234.png" 
+                            alt="Data visualization dashboard showing assessment results and analytics" 
+                            class="w-full !rounded shadow-lg"
+                            loading="lazy"
+                            srcset="https://lsder147.mycafe24.com/wp-content/uploads/2025/04/1234.png 400w,
+                                    https://lsder147.mycafe24.com/wp-content/uploads/2025/04/1234.png 800w"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                        >
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-4">시각화 제공</h3>
+                        <p class="text-gray-600 mb-4">
+                            학생 응답 데이터를 바탕으로 다양한 차트를 제공합니다.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-1">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span>정답률 차트</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-1">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span>문항별 정답률 차트</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-1">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span>학습목표별 정답률 차트</span>
+                            </li>
+                        </ul>
+                    </div>
+                </figure>
+                
+                <!-- Gallery Item 3 -->
+                <figure class="scroll-reveal flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <img 
+                            src="https://lsder147.mycafe24.com/wp-content/uploads/2025/04/12345.png" 
+                            alt="Collaborative assessment interface with multiple evaluators providing feedback" 
+                            class="w-full !rounded shadow-lg"
+                            loading="lazy"
+                            srcset="https://lsder147.mycafe24.com/wp-content/uploads/2025/04/12345.png 400w,
+                                    https://lsder147.mycafe24.com/wp-content/uploads/2025/04/12345.png 800w"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                        >
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-4">AI 서술형 채점</h3>
+                        <p class="text-gray-600 mb-4">
+                            교사가 등록한 채점기준에 따라 학생 답안을 AI가 채점해줍니다.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-1">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span>교사의 채점 기준에 따른 채점</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-1">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span>채점이유와 설명 제공</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-1">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span>다수의 학생 동시 채점</span>
+                            </li>
+                        </ul>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zoom Focus Image Section -->
+    <section class="py-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">학생 확인용 웹앱 제공</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    학생들은 자신의 응답과 개인 선택지에 따른 개별적 피드백을 확인할 수 있습니다.
+                </p>
+            </div>
+            
+            <div class="flex justify-center">
+                <div class="w-full max-w-4xl">
+                    <img 
+                        id="zoomShot"
+                        src="https://lsder147.mycafe24.com/wp-content/uploads/2025/04/12.png" 
+                        alt="Comprehensive assessment dashboard showing multiple evaluation types" 
+                        class="w-full !rounded shadow-xl"
+                        loading="lazy"
+                        srcset="https://lsder147.mycafe24.com/wp-content/uploads/2025/04/12.png 600w,
+                                https://lsder147.mycafe24.com/wp-content/uploads/2025/04/12.png 1200w"
+                        sizes="(max-width: 768px) 100vw, 1200px"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sticky CTA -->
+    <div class="sticky-cta hidden md:block">
+        <a href="https://futuristic-haddock-b65.notion.site/1e3cf466808280bb993bdf34df5daa33?pvs=74" class="bg-primary text-white px-6 py-3 !rounded-button font-semibold shadow-lg whitespace-nowrap">
+            사용하기
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll reveal animation
+            const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+            
+            const scrollObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+                        entry.target.classList.add('show');
+                        // Unobserve after animation
+                        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                            scrollObserver.unobserve(entry.target);
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.3
+            });
+            
+            scrollRevealElements.forEach(element => {
+                scrollObserver.observe(element);
+            });
+            
+            // Zoom focus animation
+            const zoomElement = document.getElementById('zoomShot');
+            
+            if (zoomElement) {
+                const zoomObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('scaleUp');
+                            // Don't unobserve to allow animation to play again when scrolling back
+                            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                                zoomObserver.unobserve(entry.target);
+                            }
+                        } else {
+                            entry.target.classList.remove('scaleUp');
+                        }
+                    });
+                }, {
+                    threshold: 0.7
+                });
+                
+                zoomObserver.observe(zoomElement);
+            }
+            
+            // Disable animations if prefers-reduced-motion
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelectorAll('.scroll-reveal').forEach(el => {
+                    el.classList.add('show');
+                    el.style.transition = 'none';
+                });
+                
+                if (zoomElement) {
+                    zoomElement.style.transition = 'none';
+                }
+                
+                document.querySelectorAll('.hover-scale').forEach(el => {
+                    el.style.transition = 'none';
+                });
+            }
+        });
+    </script>
+    
+    <!-- Lightweight Analytics -->
+    <script defer>
+        window.addEventListener('load', function() {
+            // Simple pageview tracking (placeholder for actual implementation)
+            console.log('Page viewed: Evaluation Sheet Landing Page');
+        });
+    </script>
+</body>
+</html>
